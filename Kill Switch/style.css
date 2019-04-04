@@ -4,9 +4,9 @@ body{
 .container{
     align-content: center;
     position: absolute;
-    top: 30%;
-    left:30%;
-    transform: translateX(-50%), translateY(-50%);
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 .container-1{
     align-content: center;
