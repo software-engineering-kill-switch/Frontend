@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>node.js express REST API</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: arial;
+			
+		}
+		header {
+			width: 100%;
+			background-color: black;
+			color: whitesmoke;
+			padding: 20px;
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		main {
+			padding: 20px;
+		}
+		form {
+			padding: 0 auto;
+			margin: 0;
+			font-family: arial;
+			font-size: 25px;
+			font-weight: bold;
+	}
+		input[type="text"] {
+			border: none;
+			border-bottom: 1px solid blue;
+			height: 30px;
+			width: 300px;
+			margin-right: 20px;
+	}
+
+		input[type="email"] {
+			border: none;
+			border-bottom: 1px solid blue;
+			height: 30px;
+			width: 300px;
+	}
+	
+	input[type="text"]:focus {
+			border: none;
+			border-bottom: 1px solid green;
+			box-shadow: 0 0 7px silver;
+			outline: none;
+			transition: box-shadow 1s;
+
+	}
+	input[type="email"]:focus {
+			border: none;
+			border-bottom: 1px solid green;
+			box-shadow: 0 0 7px silver;
+			outline: none;
+			transition: box-shadow 1s;
+	}
+	span {
+		color: red;
+	}
+	main {
+		
+	}
+	
+	</style>
+</head>
+
+<body>
+	<header>Database Login</header>
+	<main>
+	<form action="http://localhost:3002/users" method="post">
+		<label for="name">NAME <span>*</span></label>
+		<input type="text" name="name" id="u_name" required>
+		<label for="email">EMAIL <span>*</span></label>
+		<input type="email" name="email" id="u_email" required>
+		<br><br><br>
+		<input type="submit" name="submit_form">
+	</form>
+	</main>
+	
+</body>
+
+</html>
