@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: brown;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Staff Attendance {background-color: red;}
+#Staff Report {background-color: green;}
+#Staff Checkin {background-color: blue;}
+#student Attendance {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Staff Attendance', this, 'red')">Staff Attendance</button>
+
+<button class="tablink" onclick="openPage('Staff Report', this, 'green')" id="defaultOpen">Staff Report</button>
+<button class="tablink" onclick="openPage('Staff Checkin', this, 'blue')">Staff Checkin</button>
+<button class="tablink" onclick="openPage('Student Attendance', this, 'orange')">student Attendance</button>
+
+<div id="Staff Attendance" class="tabcontent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+   
+<div class="container">
+ <p>All Staff Present</p>
+                                          
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">All
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">MR. Kwame Asiedu</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mr. kwaku Amoako</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mr. kwasi Addo</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" 
+    </ul>
+    
+  </div>
+</div>.</p>
+<p> </p>
+</div>
+
+<div id="Staff Report" class="tabcontent">
+  <h3>Staff Report</h3>
+  <p></p> 
+</div>
+
+<div id="Staff Checkin" class="tabcontent">
+  <h3>Staff Checkin</h3>
+ </p>
+</div>
+
+<div id="Student Attendance" class="tabcontent">
+  <h3>Student Attendance</h3>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
