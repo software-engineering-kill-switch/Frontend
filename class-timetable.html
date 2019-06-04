@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="CSS/menu.css"/>
+    <link rel="stylesheet" href="CSS/apps.css"/>
+
+    <title>TimeTable</title>
+  </head>
+  <body>
+    <aside class="left-panel"> <!--main menu -->
+      <nav class="navbar navbar-expand-sm navbar-default">
+        <div id="main-menu" class="main-menu collapse navbar-collapse">
+          <ul class="nav navbar-nav flex-column">
+            <div class="navbar navbar-header"><h1>DATABASE</h1>
+            </div>
+            <li class="active">
+              <a href="dashboard.html">Getting Started</a>
+            </li>
+            <li><a href="billing.html">Billing & Payment</a></li>
+            <li><a href="enrollment.html">Enrollment</a></li>
+            <li class="menu-item-has-children dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">School Data</a>
+                <ul class="sub-menu children dropdown-menu">
+                  <li><a href="school-calendar.html">School Calendar</a></li>
+                  <li><a href="class-timetable.html">Class Timetable</a></li>
+                </ul>
+            </li>
+            <hr>
+            <h4 class="menu-title">Setup</h4>
+            <hr/>
+              <li><a href="student-registration.html">Student Registration</a></li>
+              <li><a href="teacher-registration.html">Teachers</a></li>
+              <li><a href="classroom.html">Classrooms</a></li>
+
+            <hr>
+          <h4 class="menu-title">Reports</h4>
+          <hr>
+            <li class="menu-item-has-children dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-hasopup="true" aria-expanded="false">Attendance</a>
+                <ul class="sub-menu children dropdown-menu">
+                    <li><a href="student-attendance.html">Student Attendance</a></li>
+                    <li><a href="teacher-attendance.html">Teachers Attendance</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside><!--Main menu-->
+
+    <div id="right-panel" class="right-panel">
+      <header id="header" class="header">
+            <div class="col-sm-7">
+
+      </header>
+
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <form class="table-input">
+            <input type="text" id="day" placeholder="Day">
+            <input type="text" id="subject" placeholder="Subject">
+            <input type="text" id="time" placeholder="Time">
+            <input type="submit" id="btn" class="add-table" value="Add Timetable">
+          </form>
+
+          <table class="table table-bordered table-striped active">
+            <thead>
+              <th>Select</th>
+              <th>Day</th>
+              <th>Subject</th>
+              <th>Time</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+          </table>
+          <button id="btn2" class="delete-table">Delete Timetable</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/bootsrap/js/dropdown.js"></script>
+    <script type="text/javascript">
+      var button = document.getElementById('btn');
+      button.style.backgroundColor = "purple";
+      button.style.border = "2px solid";
+      button.style.color = "white";
+      button.style.borderRadius = "5px";
+      button.style.outline = "none";
+
+      var button = document.getElementById('btn2');
+      button.style.backgroundColor = "purple";
+      button.style.border = "2px solid";
+      button.style.color = "white";
+      button.style.borderRadius = "5px";
+      button.style.outline = "none";
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $(".add-table").click(function(){
+              var day = $("#day").val();
+              var subject = $("#subject").val();
+              var time = $("#time").val();
+              var implement = "<tr><td><input type='checkbox' name='record'></td><td>" + day + "</td><td>" + subject + "</td><td>" + time + "</td></tr>";
+              $("table tbody").append(implement);
+          });
+
+          $(".delete-table").click(function(){
+              $("table tbody").find('input[name="record"]').each(function(){
+                  if($(this).is(":checked")){
+                      $(this).parents("tr").remove();
+            }
+          });
+        });
+      });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/apps.css"/>
+    <title>Create Account</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #efefef;
+        color: #777;
+        font-family: sans-serif;
+        font-weight: 300;
+      }
+      .register{
+        content-align: center;
+        top: 0;
+        left: 0;
+        padding: 40px;
+        width: 20%;
+        position: relative;
+        margin: 10% auto;
+        margin-left: 38%;
+        height: 420px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6)
+      }
+      h1{
+        font-size: 50px;
+        font-weight: 100;
+        text-align: center;
+        margin: -10px 0 20px 0;
+      }
+      input[type="text"], input[type="password"]{
+          outline: none;
+          display: block;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+          padding: 4px;
+          width: 100%;
+          height: 32px;
+          border: none;
+          border-bottom: 1px solid #aaa;
+          font-weight: 400px;
+          font-size: 16px;
+          transition: 0.2 ease;
+      }
+      input[type=submit]{
+        margin-bottom: 28px;
+        width: 50%;
+        height: 32px;
+        background: #f44336;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 500px;
+        text-transform: uppercase;
+        transition: 0.2s ease;
+      }
+      input[type="submit"]:hover,
+      input[type="submit"]:focus {
+        cursor: pointer;
+        background: purple;
+        transition: 0.2s ease;
+        outline: none;
+      }
+      #message {
+        display:none;
+        background: #f1f1f1;
+        color: #000;
+        position: relative;
+        padding: 20px;
+        margin-top: 10px;
+      }
+
+      #message p {
+        padding: 10px 35px;
+        font-size: 18px;
+      }
+      .valid {
+        color: green;
+      }
+
+      .valid:before {
+        position: relative;
+        left: -35px;
+        content: "&#10004;";
+      }
+      .invalid {
+        color: red;
+      }
+
+      .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "&#10006;";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="register">
+      <h1 class="display-1">Sign Up</h1>
+
+      <input type="text" name="firstname" placeholder="First Name"/>
+      <input type="text" name="lastname" placeholder="Last Name" />
+      <input type="text" name="email" placeholder="Email" />
+      <input type="text" name="username" placeholder="Username" />
+
+      <input type="checkbox" id="checkbox" onclick="showPass()"/>Show Password
+      <input type="password" class="passwords" id="pass" name="password" placeholder="Enter Password"/>
+      <input type="password" class="passwords" id="pass2" name="confirmpassword" placeholder="Confirm password" />
+
+      <input type="submit" name="signup" value="Create Account"/>
+    </div>
+
+    <script>
+
+      function showPass() {
+        var x = document.getElementsByClassName("passwords");
+        var i;
+        for (i = 0; i <= x.length; i++){
+          if (x[i].type === "password") {
+            x[i].type = "text";
+          } else {
+            x[i].type = "password";
+          }
+        }
+      }
+
+      var pass, cpass;
+      pass = document.getElementById("pass");
+      cpass = document.getEleementyId("pass2");
+
+      if(pass != cpass) {
+        alert("Your passwords do not match");
+      }
+    </script>
+  </body>
+</html>
