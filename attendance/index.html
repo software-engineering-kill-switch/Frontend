@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<body>
+<br>
+
+<div class="container">
+  <h2>Attendance</h2>
+  <br>
+  <!-- Nav pills -->
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#home">Student Attendance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu1">Staff Checkin</a>
+    </li>
+     
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <p><table class="attendance-table">
+            <tbody><tr class="attendance-table-head">
+            <th class="table-head-td-course">Class</th>
+            <th class="table-head-td">Class Size</th>
+            <th class="table-head-td">Present</th>
+            <th class="table-head-td">Absent</th>
+            </tr>
+            <tr class="attendanceRow">
+             
+            <td class="attendanceRowCourse">Creche</td>
+            <td class="attendanceRowStat">12</td>
+            <td class="attendanceRowStat">10</td>
+            <td class="attendanceRowStat">2</td>
+            <td class="attendanceRowStat">
+            </td>
+            </tr>
+            <tr class="attendanceRow">
+             
+            <td class="attendanceRowCourse">Nursery 1</td>
+            <td class="attendanceRowStat">13</td>
+            <td class="attendanceRowStat">9</td>
+            <td class="attendanceRowStat">4</td>
+            <td class="attendanceRowStat">
+
+            </td>
+            </tr>
+            <tr class="attendanceRow">
+             
+            <td class="attendanceRowCourse">Nursery 2</td>
+            <td class="attendanceRowStat">10</td>
+            <td class="attendanceRowStat">8</td>
+            <td class="attendanceRowStat">2</td>
+            <td class="attendanceRowStat">
+            </td>
+            </tr>
+            <tr class="attendanceRow">
+             
+            <td class="attendanceRowCourse">Kindergarten 1</td>
+            <td class="attendanceRowStat">12</td>
+            <td class="attendanceRowStat">11</td>
+            <td class="attendanceRowStat">1</td>
+            <td class="attendanceRowStat">
+            </td>
+            </tr>
+            <tr class="attendanceRow">
+             
+            <td class="attendanceRowCourse">Kindergarten 2</td>
+            <td class="attendanceRowStat">13</td>
+            <td class="attendanceRowStat">12</td>
+            <td class="attendanceRowStat">1</td>
+            <td class="attendanceRowStat">
+            </td>
+            </tr>
+           
+            </tbody></table></p>
+            <div class="container">
+                    <form action="/action_page.php">
+                      <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" class="form-control" id="date" placeholder="dd//mm/yy" name="date">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Staff Checkin</h3>
+      <div class="container">            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Teacher</th>
+        <th>Class</th>
+        <th>Satus(Present/Absent)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="container">
+        <form action="/action_page.php">
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control" id="date" placeholder="mm//dd//yy" name="date">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
